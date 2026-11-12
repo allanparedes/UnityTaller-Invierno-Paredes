@@ -15,13 +15,17 @@ Main Camera
 Moon_Light          (Directional Light azul pálido, intensidad 0.35)
 Snow_Terrain        (Plane con material de nieve)
 Police_Car          (Empty, Y = -0.5 para simular que está enterrado)
-├── Car_Mesh        (Cube, carrocería)
+├── Car_Mesh        (Modelo 3D de la patrulla, un solo mesh)
 ├── Siren_Pivot     (Empty en el techo, con SirenRotation.cs)
 │   ├── Red_Light   (Spot Light roja)
 │   └── Blue_Light  (Spot Light azul, orientada al lado opuesto)
 └── Exhaust_Smoke   (Particle System, humo del escape)
 Global_Blizzard     (Particle System, nieve sobre toda la escena)
 ```
+
+## Modelo de la patrulla
+
+`Car_Mesh` usa un modelo propio (`Assets/Models/Patrulla.asset`) construido como un único mesh con varios materiales, así la jerarquía sigue teniendo exactamente 10 objetos. Incluye carrocería blanca con franja azul y puertas negras, cabina con vidrios inclinados, barra de luces roja y azul con emisión, faros, pilotos, parachoques, espejos, nieve acumulada sobre el capó y el techo, y una duna de nieve alrededor que lo deja semienterrado.
 
 ## Script `SirenRotation.cs`
 
